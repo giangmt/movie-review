@@ -14,3 +14,14 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require "js/app"
+//= require "js/plugins"
+//= require "js/jquery-1.11.1.min"
+//= require "js/ie-support/html5"
+//= require "js/ie-support/respond"
+//= require "js/min/app-min"
+//= require "js/min/plugins-min"
+
+
+
+

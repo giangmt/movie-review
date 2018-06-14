@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MovieReview</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title><%= full_title yield :title %></title>
+    <%= render "layouts/rails_head" %>
   </head>
 
   <body>
-    <%= yield %>
+    <div id="site-content">
+      <%= render "layouts/header" %>
+      <main class="main-content">
+        <div class="container">
+          <div class="page">
+            <%= render "shared/flash_messages" %>
+            <%= yield %>
+          </div>
+        </div>
+      </main>
+      <%= render "layouts/footer" %>
+    </div>
   </body>
 </html>

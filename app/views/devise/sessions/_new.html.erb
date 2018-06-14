@@ -1,0 +1,30 @@
+<%= form_for resource, url: session_path(resource), id: "login-form" do |f| %>
+  <div class="modal-body">
+    <div id="div-login-msg">
+        <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+        <span id="text-login-msg"><%= t ".type_login" %></span>
+    </div>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", id: "login_email", class: "form-control", placeholder: "Email" %>
+
+    <%= f.password_field :password, autocomplete: "off", id: "login_password", class: "form-control", placeholder: "Password" %>
+    
+    <% if devise_mapping.rememberable? -%>
+      <div class="checkbox">
+        <label>
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </label>
+      </div>
+    <% end %>
+
+  </div>
+  <div class="modal-footer">
+    <div>
+      <%= f.submit t(".login"), class: "btn btn-primary btn-lg btn-block" %>
+    </div>
+    <div>
+      <%= button_tag t(".forgot"), id: "login_lost_btn", class: "btn btn-link" %>
+      <%= button_tag t(".register"), id: "login_register_btn", class: "btn btn-link" %>
+    </div>
+  </div>
+<% end %>

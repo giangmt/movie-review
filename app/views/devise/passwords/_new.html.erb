@@ -1,0 +1,19 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }, id: "lost-form") do |f| %>
+  <%= devise_error_messages! %>
+  <div class="modal-body">
+  <div id="div-lost-msg">
+    <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+    <span id="text-lost-msg"><%= t ".type_password" %></span>
+  </div>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", id: "lost_email", class: "form-control", placeholder: "Email" %>
+    </div>
+  <div class="modal-footer">
+    <div>
+      <%= f.submit t(".send"), class: "btn btn-primary btn-lg btn-block" %>
+    </div>
+    <div>
+      <%= button_tag t(".login"), id: "lost_login_btn", class: "btn btn-link" %>
+      <%= button_tag t(".register"), id: "lost_register_btn", class: "btn btn-link" %>
+    </div>
+  </div>
+<% end %>

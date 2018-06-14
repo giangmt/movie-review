@@ -16,12 +16,20 @@
         </label>
       </div>
     <% end %>
-
   </div>
   <div class="modal-footer">
     <div>
       <%= f.submit t(".login"), class: "btn btn-primary btn-lg btn-block" %>
     </div>
+    <% if devise_mapping.omniauthable? %>
+      <div class="linked-signin">
+        <% resource_class.omniauth_providers.each do |provider| %>
+          <%= link_to omniauth_authorize_path resource_name, provider do %>
+            <div><%= t ".signin_with", provider: provider.capitalize %></div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
     <div>
       <%= button_tag t(".forgot"), id: "login_lost_btn", class: "btn btn-link" %>
       <%= button_tag t(".register"), id: "login_register_btn", class: "btn btn-link" %>

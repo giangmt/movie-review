@@ -22,3 +22,7 @@ en:
       version: "Movie Reviews © %{year}"
     application: 
       title: "Movie Reviews"
+  movies:
+    index:
+      browse_movies: "Browse Movies"
+      home: "Home"

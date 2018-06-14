@@ -3,7 +3,7 @@ common: &common
   encoding: utf8
   reconnect: false
   pool: 5
-  host: <%= ENV["HOST_NAME"] %>
+  host: <%= ENV["HOSTNAME"] %>
   username: <%= ENV["USERNAME"] %>
   password: <%= ENV["PASSWORD"] %>
 

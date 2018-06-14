@@ -1,0 +1,20 @@
+<% provide :title, t(".browse_movies") %>
+
+<div class="breadcrumbs">
+  <%= link_to t(".home"), root_path %>
+  <span><%= t ".browse_movies" %></span>
+</div>
+<div class="movie-list">
+  <% @movies.each do |movie| %>
+      <div class="movie">
+        <% movie.movie_images.each do |image| %>
+          <div class="movie-poster"><%= link_to image_tag(image.image_url), "#" %></div>
+        <% end %>
+        <div class="movie-title"><%= truncate movie.name, length: 30 %></div>
+        <p><%= truncate movie.synopsis, length: 60 %></p>
+      </div>
+  <% end %>
+</div>
+<div class="pagination">
+  <%= will_paginate @movies %>
+</div>

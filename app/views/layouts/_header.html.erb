@@ -1,0 +1,43 @@
+<header class="site-header">
+  <div class="container">
+    <%= link_to root_path, id: "branding" do %>
+      <%= image_tag "logo.png", class: "logo" %>
+      <div class="logo-copy">
+        <h1 class="site-title"><%= t ".title" %></h1>
+        <small class="site-description"><%= t ".description" %></small>
+      </div>
+    <% end %>
+
+    <div class="main-navigation">
+      <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+      <ul class="menu">
+        <li class="menu-item current-menu-item"><%= link_to t(".home"), root_path %></li>
+        <li class="menu-item"><%= link_to t(".browse_movie"), "#" %></li>
+        <% if user_signed_in? %>
+          <li class="dropdown">
+            <%= link_to "#", class: "dropdown-toggle", data: {toggle: :dropdown} do %>
+              <%= t ".account" %> 
+              <b class="caret"></b>
+            <% end %>
+            <ul class="dropdown-menu">
+              <li><%= link_to t(".profile"), "#" %></li>
+              <li><%= link_to t(".suggestions"), "#" %></li>
+              <li><%= link_to t(".bookmarks"), "#" %></li>
+              <li><%= link_to t(".logout"), destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li class="menu-item" data-toggle="modal" data-target="#login-modal"><%= t ".login" %></li>
+          <%= render "layouts/modal" %>
+        <% end %>
+      </ul>
+
+      <form action="#" class="search-form">
+        <input type="text" placeholder="Quick search...">
+        <button><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+    <div class="mobile-navigation"></div>
+  </div>
+</header>

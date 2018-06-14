@@ -1,0 +1,25 @@
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" align="center">
+        <%= image_tag "logo.png", class: "img-circles", id: "img_logo" %>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div id="div-forms">
+        <div id="login-form">
+          <%= render "devise/sessions/new" %>
+        </div>
+
+        <div id="lost-form" style="display:none;">
+          <%= render "devise/passwords/new" %>
+        </div>
+        
+        <div id="register-form" style="display:none;">
+          <%= render "devise/registrations/new" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

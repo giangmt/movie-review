@@ -1,0 +1,24 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), id: "register-form") do |f| %>
+  <%= devise_error_messages! %>
+<div class="modal-body">
+  <div id="div-register-msg">
+      <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+      <span id="text-register-msg"><%= t ".register_label" %></span>
+  </div>
+  <%= f.email_field :email, autofocus: true, autocomplete: "email", id: "register_email", class: "form-control", placeholder: "Email" %>
+  <% if @minimum_password_length %>
+  <em>(<%= @minimum_password_length %> characters minimum)</em>
+  <% end %><br />
+  <%= f.password_field :password, autocomplete: "off", id: "register_password", class: "form-control", placeholder: "Password" %>
+  <%= f.password_field :password_confirmation, autocomplete: "off", id: "confirm_password", class: "form-control", placeholder: "Password Confirmation" %>
+</div>
+<div class="modal-footer">
+  <div>
+    <%= f.submit t(".register"), class: "btn btn-primary btn-lg btn-block" %>
+  </div>
+  <div>
+    <%= button_tag t(".login"), id: "register_login_btn", class: "btn btn-link" %>
+    <%= button_tag t(".forgot"), id: "register_lost_btn", class: "btn btn-link" %>
+  </div>
+</div>
+<% end %>

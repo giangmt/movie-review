@@ -1,0 +1,31 @@
+<% provide :title, @movie.name %>
+
+<div class="breadcrumbs">
+  <%= link_to t(".home"), root_path %>
+  <%= link_to t(".movie_detail"), movies_path %>
+  <span><%= @movie.name %></span>
+</div>
+<div class="content">
+  <div class="row">
+    <div class="col-md-3">
+      <% @movie.movie_images.each do |image| %>
+        <div class="movie-poster"><%= image_tag image.image_url, class: "thumbnail" %></div>
+      <% end %>
+    </div>
+    <div class="col-md-5">
+      <h2 class="movie-title"><%= @movie.name %></h2>
+      <div class="movie-summary">
+        <p><%= truncate @movie.synopsis, length: Settings.movies.synopsis_short %>.</p>
+      </div>
+      <ul class="movie-meta">
+        <%= render "movie_info" %>
+      </ul>
+    </div>
+    <div id="screenshots" class="col-md-4">
+      <%= render "movie_trailer" %>
+    </div>
+  </div>
+  <div class="entry-content">
+    <p><%= @movie.synopsis %></p>
+  </div>
+</div>

@@ -26,3 +26,16 @@ en:
     index:
       browse_movies: "Browse Movies"
       home: "Home"
+    show:
+      home: "Home"
+      movie_detail: "Movie Details"
+    movie_info:
+      cast: "Cast"
+      director: "Director"
+      genre: "Genre"
+      length: "Length"
+      premiere: "Premiere"
+    movie_trailer:
+      trailer: "Movie Trailer"
+
+

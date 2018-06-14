@@ -1,0 +1,11 @@
+<li><strong><%= t ".genre" %>: </strong><%= @movie.genre.name %></li>
+
+<li><strong><%= t ".premiere" %>: </strong><%= @movie.premiere %></li>
+
+<li><strong><%= t ".length" %>: </strong><%= @movie.length %></li>
+
+<li><strong><%= t ".director" %>: </strong><%= @movie.director.name %></li>
+
+<% @movie.movie_casts.each do |cast| %>
+	<li><strong><%= t ".cast" %>: </strong><%= cast.cast.name %></li>
+<% end %>

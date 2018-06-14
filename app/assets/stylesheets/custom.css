@@ -60,3 +60,20 @@
 #register-form {
   display: none;
 }
+
+figure .movie_poster {
+  margin-right: 5px;
+}
+
+figure img {
+  display: block;
+  width: 80%;
+  max-width: 100%;
+  height: auto;
+}
+
+#playTrailer {
+  position: absolute;
+  height: 230px;
+  width: 355px;
+}

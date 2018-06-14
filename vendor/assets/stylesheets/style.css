@@ -1597,10 +1597,13 @@ ul.arrow {
 .movie-list {
   margin: 0 -15px; }
   .movie-list .movie {
-    width: 25%;
+    width: 20%;
     padding: 0 15px;
     float: left;
     margin-bottom: 30px; }
+    p {
+      font-size: 0.9em;
+    }
     @media screen and (min-width: 991px) {
       .movie-list .movie:nth-child(4n+1) {
         clear: both; } }
@@ -1618,7 +1621,7 @@ ul.arrow {
     .movie-list .movie .movie-poster {
       border-radius: 5px;
       overflow: hidden;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       border: 1px solid transparent; }
       .movie-list .movie .movie-poster img {
         display: block;
@@ -1632,10 +1635,9 @@ ul.arrow {
           -ms-transform: scale(1.2);
               transform: scale(1.2); }
     .movie-list .movie .movie-title {
-      font-size: 24px;
-      font-size: 1.6em;
+      font-size: 1.2em;
       font-weight: 300;
-      margin-bottom: 20px; }
+      margin-bottom: 10px; }
       .movie-list .movie .movie-title a {
         color: #84878d;
         -webkit-transition: .3s ease;

@@ -1,118 +1,19 @@
 <div class="row">
-  <div class="col-md-9">
-    <div class="slider">
-      <ul class="slides">
-        <li><a href="#"><%= image_tag "dummy/slide-1.jpg" %></a></li>
-        <li><a href="#"><%= image_tag "dummy/slide-2.jpg" %></a></li>
-        <li><a href="#"><%= image_tag "dummy/slide-3.jpg" %></a></li>
-      </ul>
+  <div class="col-sm-6 col-md-12">
+    <div class="movie-list">
+      <% @movies.each do |movie| %>
+          <div class="movie">
+            <% movie.movie_images.each do |image| %>
+              <div class="movie-poster"><%= link_to image_tag(image.image_url), "#" %></div>
+            <% end %>
+            <div class="movie-title"><%= truncate movie.name, length: 30 %></div>
+          </div>
+      <% end %>
+    </div>
+    <div class="pagination">
+      <%= will_paginate @movies %>
     </div>
   </div>
-  <div class="col-md-3">
-    <div class="row">
-      <div class="col-sm-6 col-md-12">
-        <div class="latest-movie">
-          <a href="#"><%= image_tag "dummy/thumb-1.jpg" %></a>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-12">
-        <div class="latest-movie">
-          <a href="#"><%= image_tag "dummy/thumb-2.jpg" %></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> <!-- .row -->
-<div class="row">
-  <div class="col-sm-6 col-md-3">
-    <div class="latest-movie">
-      <a href="#"><%= image_tag "dummy/thumb-3.jpg" %></a>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-3">
-    <div class="latest-movie">
-      <a href="#"><%= image_tag "dummy/thumb-4.jpg" %></a>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-3">
-    <div class="latest-movie">
-      <a href="#"><%= image_tag "dummy/thumb-5.jpg" %></a>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-3">
-    <div class="latest-movie">
-      <a href="#"><%= image_tag "dummy/thumb-6.jpg" %></a>
-    </div>
-  </div>
-</div> <!-- .row -->
+</div>  
 
-<div class="row">
-  <div class="col-md-4">
-    <h2 class="section-title">December premiere</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-    <ul class="movie-schedule">
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-    </ul> <!-- .movie-schedule -->
-  </div>
-  <div class="col-md-4">
-    <h2 class="section-title">November premiere</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-    <ul class="movie-schedule">
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-    </ul> <!-- .movie-schedule -->
-  </div>
-  <div class="col-md-4">
-    <h2 class="section-title">October premiere</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-    <ul class="movie-schedule">
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-      <li>
-        <div class="date">16/12</div>
-        <h2 class="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-      </li>
-    </ul> <!-- .movie-schedule -->
-  </div>
-</div>
-
-    
+<%= render "trend" %>   

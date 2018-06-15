@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :interactives
+  has_many :interactives, dependent: :destroy
   has_many :comments
   has_many :reviews, dependent: :destroy
   # Include default devise modules. Others available are:
@@ -37,5 +37,9 @@ class User < ApplicationRecord
 
   def has_movie? movie 
     reviews.find_by movie: movie
+  end
+
+  def has_review? review
+    interactives.find_by review: review
   end
 end

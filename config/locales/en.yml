@@ -29,6 +29,11 @@ en:
     show:
       home: "Home"
       movie_detail: "Movie Details"
+      write_review: "Write a review"
+      user_review: "User Reviews"
+    reviews:
+      see_more: "See more"
+      posted: "Posted on"
     movie_info:
       cast: "Cast"
       director: "Director"
@@ -37,5 +42,13 @@ en:
       premiere: "Premiere"
     movie_trailer:
       trailer: "Movie Trailer"
+  reviews:
+    create:
+      created: "Review created!"
+    new:
+      back: "Back"
+      home: "Home"
+      movie_review: "Movie Review"
+      placehol: "Enter a title for article..."
 
 

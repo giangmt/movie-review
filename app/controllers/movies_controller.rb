@@ -6,5 +6,6 @@ class MoviesController < ApplicationController
   def show
     @movie = Movie.find_by id: params[:id]
     redirect_to root_path unless @movie
+    @reviews = @movie.reviews
   end
 end

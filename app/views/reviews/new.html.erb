@@ -1,0 +1,49 @@
+<div class="breadcrumbs">
+  <%= link_to t(".home"), root_path %>
+  <%= link_to t(".movie_review"), movies_path %>
+  <span><%= @movie.name %></span>
+</div>
+
+<div class="content">
+  <div class="row">
+    <div class="col-sm-3 col-md-3">
+      <div class="panel panel-success">
+       <div class="panel-body">
+        <% @movie.movie_images.each do |image| %>
+          <div class="movie-poster"><%= image_tag image.image_url, class: "thumbnail" %></div>
+        <% end %>
+       </div>
+       <div class="panel-footer">
+        <%= render "movies/movie_info" %>
+       </div>
+      </div>
+    </div>
+
+    <div class="col-sm-9 col-md-9">
+      <%= form_for [@movie, @review] do |f| %>
+        <%= render "shared/error_messages", object: f.object %>
+        
+        <%= f.hidden_field :movie_id, value: @movie.id %>
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <div class="field" id="review-title">
+              <%= f.label :title %>
+              <%= f.text_field :title, placeholder: t(".placehol") %>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="field" id="review-content">
+              <%= f.cktext_area :content, row: 20 %>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <div class="actions">
+              <%= f.submit %>
+              <%= link_to t(".back"), @movie, class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

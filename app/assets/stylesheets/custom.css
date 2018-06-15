@@ -77,3 +77,35 @@ figure img {
   height: 230px;
   width: 355px;
 }
+
+.user-reviews {
+  background-color: #f1f1f1;
+  padding: 0.01em 16px;
+  margin: 20px 0;
+  border-radius: 6px;
+}
+
+.wire-review-btn {
+  margin: 20px 0;
+  text-decoration: none;
+}
+
+.media {
+  background-color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 50px;  
+}
+
+.media-left {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+
+.media-object {
+  width: 50px;
+}
+
+#review-title {
+  display: grid;
+}

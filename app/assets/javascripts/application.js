@@ -19,6 +19,7 @@
 //= require "js/jquery-1.11.1.min"
 //= require "js/plugins"
 //= require "js/app"
+//= require ckeditor/init
 //= require_tree .
 
 

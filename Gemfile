@@ -6,6 +6,7 @@ ruby '2.4.2'
 gem "bootstrap-sass"
 gem "omniauth-facebook"
 gem "omniauth-github"
+gem 'ckeditor'
 gem 'coffee-rails', '~> 4.2'
 gem 'config'
 gem 'jbuilder', '~> 2.5'

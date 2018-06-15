@@ -1,5 +1,7 @@
 min_password_length: 6
 max_password_length: 32
+movie_name_length: 30
+movie_syno_length: 60
 movies:
   page: 12
   synopsis_short: 200

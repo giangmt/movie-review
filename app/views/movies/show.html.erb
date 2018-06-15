@@ -31,7 +31,7 @@
   
   <div class="wire-review-btn">
     <% if user_signed_in? %>
-      <% unless current_user.reviews.present? && @movie.reviews.present? %>
+      <% unless current_user.has_movie?(@movie) %>
         <%= link_to t(".write_review"), new_movie_review_path(@movie), class: "btn-sm btn-primary" %>
       <% end %>
     <% end %>
@@ -40,7 +40,7 @@
   <div class="row">
     <div class="col-sm-8 col-md-12">
       <% if @movie.reviews.any? %>
-        <h2><%= t ".user_review" %> (<%= @movie.reviews.count %>)</h2>
+        <h2><%= t ".user_review" %><%= " (#{@movie.count_reviews})" %></h2>
         <%= render "reviews" %>
       <% end %>
     </div>

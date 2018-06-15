@@ -34,4 +34,8 @@ class User < ApplicationRecord
       end
     end
   end
+
+  def has_movie? movie 
+    reviews.find_by movie: movie
+  end
 end

@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :authenticate_user!, :set_movie, only: [:new, :create]
+  before_action :authenticate_user!, :set_movie, :set_reviews, only: [:new, :create]
 
   def new
     @review = Review.new
@@ -18,7 +18,11 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit :title, :content, :movie_id
+    params.require(:review).permit :title, :content, :movie_id, :rating
+  end
+
+  def set_reviews
+    @reviews = Review.pluck :rating
   end
 
   def set_movie

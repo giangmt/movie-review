@@ -421,17 +421,17 @@ ul.arrow {
   line-height: 1.1;
   font-size: 15px;
   font-size: 1em;
-  width: 4.7em;
+  width: 7em;
   font-family: "FontAwesome"; }
 
-.star-rating:before {
+/*.star-rating:before {
   content: "\f005\f005\f005\f005\f005";
   float: left;
   top: 0;
   left: 0;
-  position: absolute; }
+  position: absolute; }*/
 
-.star-rating span {
+/*.star-rating span {
   overflow: hidden;
   float: left;
   top: 0;
@@ -444,7 +444,7 @@ ul.arrow {
   top: 0;
   position: absolute;
   left: 0;
-  color: #ffaa3c; }
+  color: #ffaa3c; }*/
 
 .feature {
   margin-bottom: 30px; }

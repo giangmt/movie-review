@@ -1,52 +1,52 @@
-# Genre.find_or_create_by!(name: "Action")
-# Genre.find_or_create_by!(name: "Adventure")
-# Genre.find_or_create_by!(name: "Drama")
-# Genre.find_or_create_by!(name: "War")
-# Genre.find_or_create_by!(name: "Animation")
-# Genre.find_or_create_by!(name: "Sci-Fi")
-# Genre.find_or_create_by!(name: "Thriller")
-# Genre.find_or_create_by!(name: "Fantasy")
-# Genre.find_or_create_by!(name: "Crime")
-# Genre.find_or_create_by!(name: "Comedy")
+Genre.find_or_create_by!(name: "Action")
+Genre.find_or_create_by!(name: "Adventure")
+Genre.find_or_create_by!(name: "Drama")
+Genre.find_or_create_by!(name: "War")
+Genre.find_or_create_by!(name: "Animation")
+Genre.find_or_create_by!(name: "Sci-Fi")
+Genre.find_or_create_by!(name: "Thriller")
+Genre.find_or_create_by!(name: "Fantasy")
+Genre.find_or_create_by!(name: "Crime")
+Genre.find_or_create_by!(name: "Comedy")
 
-# Director.create!(name: "Luc Besson")
-# Director.create!(name: "Steven S. DeKnight")
-# Director.create!(name: "James Marsh")
-# Director.create!(name: "Saul Dibb")
+Director.create!(name: "Luc Besson")
+Director.create!(name: "Steven S. DeKnight")
+Director.create!(name: "James Marsh")
+Director.create!(name: "Saul Dibb")
 
-# Cast.create!(name: "Rosanna Arquette")
-# Cast.create!(name: "John Boyega")
-# Cast.create!(name: "Rachel Weisz")
-# Cast.create!(name: "Paul Bettany")
+Cast.create!(name: "Rosanna Arquette")
+Cast.create!(name: "John Boyega")
+Cast.create!(name: "Rachel Weisz")
+Cast.create!(name: "Paul Bettany")
 
 
-# Movie.create!(name: "The Mercy",
-#   youtube_id: "ToN2G3K5pOE",
-#   synopsis: "The incredible story of Donald Crowhurst , an amateur sailor who competed in the 1968 Sunday Times Golden Globe Race in the hope of becoming the first person in history to single-handedly circumnavigate the globe without stopping. With an unfinished boat and his business and house on the line, Donald leaves his wife, Clare and their children behind, hesitantly embarking on an adventure on his boat the Teignmouth Electron. The story of Crowhurst's dangerous solo voyage and the struggles he confronted on the epic journey while his family awaited his return is one of the most enduring mysteries of recent times.",
-#   length: "1hr 20min",
-#   premiere: "2018",
-#   genre_id: 1,
-#   director_id: 1)
+Movie.create!(name: "The Mercy",
+  youtube_id: "ToN2G3K5pOE",
+  synopsis: "The incredible story of Donald Crowhurst , an amateur sailor who competed in the 1968 Sunday Times Golden Globe Race in the hope of becoming the first person in history to single-handedly circumnavigate the globe without stopping. With an unfinished boat and his business and house on the line, Donald leaves his wife, Clare and their children behind, hesitantly embarking on an adventure on his boat the Teignmouth Electron. The story of Crowhurst's dangerous solo voyage and the struggles he confronted on the epic journey while his family awaited his return is one of the most enduring mysteries of recent times.",
+  length: "1hr 20min",
+  premiere: "2018",
+  genre_id: 1,
+  director_id: 1)
 
-# MovieImage.create!(image_url: "https://yts.am/assets/images/movies/the_mercy_2018/medium-cover.jpg",
-# 	movie_id: 1)
+MovieImage.create!(image_url: "https://yts.am/assets/images/movies/the_mercy_2018/medium-cover.jpg",
+  movie_id: 1)
 
-# MovieCast.create!(cast_id: 1,
-# 	movie_id: 1)
+MovieCast.create!(cast_id: 1,
+  movie_id: 1)
 
-# Movie.create!(name: "Journey's End",
-#   youtube_id: "tLpyaLNfudY",
-#   synopsis: %{Set in a dugout in Aisne in 1918, it is the story of a group of British officers, led by the mentally disintegrating young officer Stanhope, as they await their fate.},
-#   length: "1hr 20min",
-#   premiere: "2017",
-#   genre_id: 2,
-#   director_id: 2)
+Movie.create!(name: "Journey's End",
+  youtube_id: "tLpyaLNfudY",
+  synopsis: %{Set in a dugout in Aisne in 1918, it is the story of a group of British officers, led by the mentally disintegrating young officer Stanhope, as they await their fate.},
+  length: "1hr 20min",
+  premiere: "2017",
+  genre_id: 2,
+  director_id: 2)
 
-# MovieImage.create!(image_url: "https://yts.am/assets/images/movies/journeys_end_2017/medium-cover.jpg",
-# 	movie_id: 2)
+MovieImage.create!(image_url: "https://yts.am/assets/images/movies/journeys_end_2017/medium-cover.jpg",
+  movie_id: 2)
 
-# MovieCast.create!(cast_id: 2,
-# 	movie_id: 2)
+MovieCast.create!(cast_id: 2,
+  movie_id: 2)
 
 Movie.create!(name: "Pacific Rim: Uprising",
   youtube_id: "EhiLLOhVis",
@@ -57,10 +57,10 @@ Movie.create!(name: "Pacific Rim: Uprising",
   director_id: 3)
 
 MovieImage.create!(image_url: "https://yts.am/assets/images/movies/pacific_rim_uprising_2018/medium-cover.jpg",
-	movie_id: 3)
+  movie_id: 3)
 
 MovieCast.create!(cast_id: 3,
-	movie_id: 3)
+  movie_id: 3)
 # Movie.create!(name: "Pacific Rim: Uprising",
 #   image: "https://yts.am/assets/images/movies/pacific_rim_uprising_2018/medium-cover.jpg",
 #   trailer: "EhiLLOhVis",

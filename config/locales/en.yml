@@ -43,6 +43,8 @@ en:
       genre: "Genre"
       length: "Length"
       premiere: "Premiere"
+      rating: "Rating"
+      review: "review"
     movie_trailer:
       trailer: "Movie Trailer"
   reviews:

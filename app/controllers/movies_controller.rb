@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   before_action :set_genres, :set_years, only: :index
+  before_action :set_movie, only: :show
 
   def index
     @movies = Movie.all
@@ -12,15 +13,20 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find_by id: params[:id]
-    redirect_to root_path unless @movie
-    @reviews = @movie.reviews
+    reviews = @movie.reviews
+    reviews.blank? ? 0 : @avg_rating = reviews.average(:rating)
+    @reviews = reviews
   end
 
   private
 
   def filter_params params
     params.permit :genre, :premiere
+  end
+
+  def set_movie
+    @movie = Movie.find_by id: params[:id]
+    redirect_to root_path unless @movie
   end
 
   def set_genres

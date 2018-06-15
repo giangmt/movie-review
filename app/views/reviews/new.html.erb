@@ -13,7 +13,7 @@
           <div class="movie-poster"><%= image_tag image.image_url, class: "thumbnail" %></div>
         <% end %>
        </div>
-       <div class="panel-footer">
+       <div class="panel-footer" id="panel-movie-info">
         <%= render "movies/movie_info" %>
        </div>
       </div>
@@ -26,6 +26,10 @@
         <%= f.hidden_field :movie_id, value: @movie.id %>
         <div class="panel panel-success">
           <div class="panel-heading">
+            <div class="field">
+              <%= f.label :rating %>
+              <div id="star-rating"></div>
+            </div>
             <div class="field" id="review-title">
               <%= f.label :title %>
               <%= f.text_field :title, placeholder: t(".placehol") %>

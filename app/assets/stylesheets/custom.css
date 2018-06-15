@@ -109,3 +109,11 @@ figure img {
 #review-title {
   display: grid;
 }
+
+.star-rating {
+  display: inline-block;
+}
+
+#panel-movie-info {
+  list-style: none;
+}

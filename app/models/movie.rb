@@ -17,4 +17,8 @@ class Movie < ApplicationRecord
   scope :genre, -> (genre_id) {where(genre_id: genre_id).order(created_at: :desc)}
 
   scope :premiere, -> (year) {where(premiere: year).order(created_at: :desc)}
+
+  def count_reviews
+    reviews.count
+  end
 end

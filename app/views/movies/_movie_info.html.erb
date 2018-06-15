@@ -1,3 +1,8 @@
+<li><strong><%= t ".rating" %>: </strong>
+
+<div class="star-rating" data-score= <%= @avg_rating %> ></div>
+<em style="font-size: 13px;"><%= "(#{@reviews.count} #{t ".review"})" %></em></li>
+
 <li><strong><%= t ".genre" %>: </strong><%= @movie.genre.name %></li>
 
 <li><strong><%= t ".premiere" %>: </strong><%= @movie.premiere %></li>

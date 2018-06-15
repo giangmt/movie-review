@@ -7,6 +7,7 @@
       <div class="media-body">
         <h4 class="media-heading"><%= review.user.email %>
           <small><i><%= t ".posted" %> <%= (review.created_at).strftime("%B %e, %Y") %></i></small></h4>
+          <div class="star-rating" data-score= <%= review.rating %> ></div>
           <h5><%= review.title %></h5>
           <p><%= truncate strip_tags(review.content), length: 500 %></p>
           <%= link_to t(".see_more") %>

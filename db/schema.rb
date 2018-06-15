@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_15_151526) do
+ActiveRecord::Schema.define(version: 2018_06_15_202855) do
 
   create_table "casts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -45,10 +45,9 @@ ActiveRecord::Schema.define(version: 2018_06_15_151526) do
 
   create_table "interactives", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "movie_id"
-    t.integer "interactable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "review_id"
   end
 
   create_table "movie_casts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -35,8 +35,11 @@ en:
       write_review: "Write a review"
       user_review: "User Reviews"
     reviews:
+      ask: "Was this review helpful to you?"
       see_more: "See more"
       posted: "Posted on"
+      liked: "Liked"
+      yes_btn: "YES"
     movie_info:
       cast: "Cast"
       director: "Director"
@@ -55,5 +58,8 @@ en:
       home: "Home"
       movie_review: "Movie Review"
       placehol: "Enter a title for article..."
+  interactives:
+    create:
+      success: "Liked success!"
 
 

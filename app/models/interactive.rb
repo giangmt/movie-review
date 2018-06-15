@@ -1,4 +1,6 @@
 class Interactive < ApplicationRecord
-  belongs_to :movie
+  belongs_to :review
   belongs_to :user
+
+  validates :review, uniqueness: {scope: :user}
 end

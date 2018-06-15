@@ -117,3 +117,15 @@ figure img {
 #panel-movie-info {
   list-style: none;
 }
+
+.inter-actions {
+  display: inline;
+}
+
+.interactive-review {
+  display: inline;
+}
+
+.inter-label {
+  margin-top: 20px;
+}

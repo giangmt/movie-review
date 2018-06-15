@@ -5,6 +5,8 @@ class Genre < ApplicationRecord
   
   before_save :capitalize_name
 
+  default_scope -> {order :name}
+
   private
 
   def capitalize_name

@@ -26,6 +26,9 @@ en:
     index:
       browse_movies: "Browse Movies"
       home: "Home"
+      filter: "Find Movie"
+      genres: "Genres"
+      years: "Years"
     show:
       home: "Home"
       movie_detail: "Movie Details"

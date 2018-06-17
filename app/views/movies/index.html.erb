@@ -8,6 +8,7 @@
   <%= form_tag movies_path, method: "get" do %>
     <%= select_tag :genre, options_for_select(@genres), prompt: t(".genres") %>
     <%= select_tag :premiere, options_for_select(@years), prompt: t(".years") %>
+    <%= select_tag :rating, options_for_select(@ratings), prompt: t(".rating") %>
     <%= submit_tag t(".filter") %>
   <% end %>
 </div>

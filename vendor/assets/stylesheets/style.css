@@ -1464,7 +1464,7 @@ ul.arrow {
         right: 0;
         margin: 0 auto;
         display: block; }
-  .main-navigation .search-form input {
+  .main-navigation .search-form search_field {
     background-color: #f0f0f0;
     border: none;
     border-left: 1px solid #eeeeef;
@@ -1477,12 +1477,12 @@ ul.arrow {
     -webkit-transition: .3s ease;
             transition: .3s ease;
     padding: 10px 0; }
-    .main-navigation .search-form input.active {
+    .main-navigation .search-form search_field.active {
       width: 200px;
       visibility: visible;
       opacity: 1;
       padding: 10px; }
-  .main-navigation .search-form button {
+  .main-navigation .search-form submit {
     background-color: transparent;
     border: none;
     border-left: 1px solid #eeeeef;
@@ -1495,7 +1495,7 @@ ul.arrow {
     outline: none;
     -webkit-transition: .3s ease;
             transition: .3s ease; }
-    .main-navigation .search-form button.active {
+    .main-navigation .search-form submit.active {
       background-color: #f0f0f0; }
 
 .mobile-navigation {

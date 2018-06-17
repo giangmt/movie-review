@@ -4,9 +4,9 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-	private
+  private
 
-	def get_movies
-    @movies = Movie.paginate page: params[:page], per_page: Settings.movies.page
+  def get_movies
+    @movies = @search.result.paginate page: params[:page], per_page: Settings.movies.page
   end
 end

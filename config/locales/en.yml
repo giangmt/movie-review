@@ -58,6 +58,8 @@ en:
       share: "Share this movie:"
     movie_trailer:
       trailer: "Movie Trailer"
+    add_to_watchlist:
+      add_watchlist: "Add to watchlist"
   reviews:
     create:
       created: "Review created!"
@@ -69,5 +71,8 @@ en:
   interactives:
     create:
       success: "Liked success!"
+  watchlists:
+    create:
+      added_to_watchlist: "Added to watchlist"
 
 

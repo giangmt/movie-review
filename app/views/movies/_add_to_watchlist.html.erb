@@ -1,0 +1,6 @@
+<%= form_for @add_watchlist do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <%= f.hidden_field :movie_id, value: @movie.id %>
+  <span class="glyphicon glyphicon-bookmark"></span>
+  <%= f.submit t(".add_watchlist") %>
+<% end %>

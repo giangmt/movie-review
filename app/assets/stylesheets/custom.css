@@ -133,3 +133,7 @@ figure img {
 .search-form {
   padding: 3px 10px;
 }
+
+.add_watchlist {
+  float: right;
+}

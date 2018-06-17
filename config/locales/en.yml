@@ -22,6 +22,12 @@ en:
       version: "Movie Reviews © %{year}"
     application: 
       title: "Movie Reviews"
+  static_pages:
+    home:
+      latest: "Latest Movies"
+      top_rated: "Top Rated"
+      most_reviewed: "Most Reviewed"
+      all_movies: "All Movies"
   movies:
     index:
       browse_movies: "Browse Movies"

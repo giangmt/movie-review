@@ -1,0 +1,8 @@
+<% @top_rated.each do |movie| %>
+  <div class="movie">
+    <% movie.movie_images.each do |image| %>
+      <div class="movie-poster"><%= link_to image_tag(image.image_url), movie %></div>
+    <% end %>
+    <div class="movie-title"><%= truncate movie.name, length: 30 %></div>
+  </div>
+<% end %>

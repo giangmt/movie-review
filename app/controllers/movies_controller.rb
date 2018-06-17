@@ -35,6 +35,6 @@ class MoviesController < ApplicationController
   end
 
   def set_years
-    @years = Movie.years
+    @years = Movie.unscoped.order(:premiere).years
   end
 end

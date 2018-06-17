@@ -10,7 +10,11 @@ class Movie < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 
-  default_scope -> {order :premiere}	
+  default_scope -> {order(created_at: :desc).includes(:movie_images)}
+
+  scope :top_reviewed, -> {joins(:reviews).sort_by(& :count_reviews).uniq.reverse}
+
+  scope :top_rated, -> {joins(:reviews).sort_by(& :count_rating).uniq.reverse}
 
   scope :years, -> {pluck(:premiere).uniq}
 
@@ -20,5 +24,9 @@ class Movie < ApplicationRecord
 
   def count_reviews
     reviews.count
+  end
+
+  def count_rating
+    reviews.average(:rating).to_i
   end
 end

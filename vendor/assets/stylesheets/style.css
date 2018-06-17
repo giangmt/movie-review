@@ -1605,12 +1605,12 @@ ul.arrow {
       font-size: 0.9em;
     }
     @media screen and (min-width: 991px) {
-      .movie-list .movie:nth-child(4n+1) {
+      .movie-list .movie:nth-child(6n+1) {
         clear: both; } }
     @media screen and (max-width: 990px) {
       .movie-list .movie {
         width: 50%; }
-        .movie-list .movie:nth-child(4n+1) {
+        .movie-list .movie:nth-child(6n+1) {
           clear: none; }
         .movie-list .movie:nth-child(2n+1) {
           clear: both; } }

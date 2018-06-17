@@ -20,6 +20,7 @@
 //= require "js/plugins"
 //= require "js/app"
 //= require ckeditor/init
+//= require social-share-button
 //= require_tree .
 
 

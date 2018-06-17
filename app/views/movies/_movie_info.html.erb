@@ -14,3 +14,5 @@
 <% @movie.movie_casts.each do |cast| %>
 	<li><strong><%= t ".cast" %>: </strong><%= cast.cast.name %></li>
 <% end %>
+
+<li><em><%= t ".share" %></em><%= social_share_button_tag @movie.name, desc: @movie.name %></li>

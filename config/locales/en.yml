@@ -55,6 +55,7 @@ en:
       premiere: "Premiere"
       rating: "Rating"
       review: "review"
+      share: "Share this movie:"
     movie_trailer:
       trailer: "Movie Trailer"
   reviews:

@@ -13,6 +13,13 @@
       <% end %>
     </div>
     <div class="col-md-5">
+      <% if user_signed_in? %>
+        <% unless current_user.has_watchlist?(@movie) %>
+          <div class="add_watchlist">
+            <%= render "add_to_watchlist" %>
+          </div>
+        <% end %>
+      <% end %>
       <h2 class="movie-title"><%= @movie.name %></h2>
       <div class="movie-summary">
         <p><%= truncate @movie.synopsis, length: Settings.movies.synopsis_short %>.</p>
@@ -32,6 +39,7 @@
   <div class="wire-review-btn">
     <% if user_signed_in? %>
       <% unless current_user.has_movie?(@movie) %>
+        <span class="glyphicon glyphicon-pencil"></span>
         <%= link_to t(".write_review"), new_movie_review_path(@movie), class: "btn-sm btn-primary" %>
       <% end %>
     <% end %>

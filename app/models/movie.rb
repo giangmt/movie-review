@@ -7,6 +7,7 @@ class Movie < ApplicationRecord
   has_many :interactives
   has_many :comments
   has_many :reviews, dependent: :destroy
+  has_many :watchlists, dependent: :destroy
 
   validates :name, presence: true, uniqueness: true
 

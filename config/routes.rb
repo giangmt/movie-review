@@ -6,6 +6,7 @@
   end
   
   resources :interactives, only: :create
+  resources :watchlists, only: :create
   
   devise_for :users, controllers: {
     registrations: "users/registrations",

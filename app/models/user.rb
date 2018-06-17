@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_many :interactives, dependent: :destroy
   has_many :comments
   has_many :reviews, dependent: :destroy
+  has_many :watchlists, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -41,5 +42,9 @@ class User < ApplicationRecord
 
   def has_review? review
     interactives.find_by review: review
+  end
+
+  def has_watchlist? movie
+    watchlists.find_by movie: movie
   end
 end

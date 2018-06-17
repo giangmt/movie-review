@@ -17,6 +17,7 @@ class MoviesController < ApplicationController
     reviews.blank? ? 0 : @avg_rating = reviews.average(:rating)
     @reviews = reviews.sort_reviews
     @inter_review = Interactive.new
+    @add_watchlist = Watchlist.new
   end
 
   private

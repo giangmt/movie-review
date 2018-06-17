@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_action :set_genres, :set_years, only: :index
+  before_action :set_genres, :set_years, :set_ratings, only: :index
   before_action :set_movie, only: :show
 
   def index
@@ -22,7 +22,7 @@ class MoviesController < ApplicationController
   private
 
   def filter_params params
-    params.permit :genre, :premiere
+    params.permit :genre, :premiere, :rating
   end
 
   def set_movie
@@ -36,5 +36,9 @@ class MoviesController < ApplicationController
 
   def set_years
     @years = Movie.unscoped.order(:premiere).years
+  end
+
+  def set_ratings
+    @ratings = Review.pluck(:rating).uniq.sort
   end
 end

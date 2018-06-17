@@ -31,9 +31,10 @@ en:
   movies:
     index:
       browse_movies: "Browse Movies"
-      home: "Home"
       filter: "Find Movie"
       genres: "Genres"
+      home: "Home"
+      rating: "Ratings"
       years: "Years"
     show:
       home: "Home"

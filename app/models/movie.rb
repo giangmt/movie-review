@@ -22,6 +22,8 @@ class Movie < ApplicationRecord
 
   scope :premiere, -> (year) {where(premiere: year).order(created_at: :desc)}
 
+  scope :rating, -> (rating) {joins(:reviews).where(reviews: {rating: rating}).order(created_at: :desc)}
+
   def count_reviews
     reviews.count
   end

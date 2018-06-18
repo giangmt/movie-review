@@ -1,0 +1,27 @@
+<% provide :title, @user.email %>
+
+<h1><%= t ".profile" %></h1>
+
+<div class="user-profile">
+  <div class="row">
+    <div class="col-sm-6 col-md-12">
+      <%= render "info" %>      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-12">
+    <h2><%= t ".reviews" %></h2>
+      <div class="user-reviews">
+        <%= render "reviews" %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-12">
+    <h2><%= t ".your_bookmarks" %></h2>
+      <div class="user-bookmarks">
+        <%= render "bookmarks" %>
+      </div>
+    </div>
+  </div>
+</div>

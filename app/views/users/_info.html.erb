@@ -1,0 +1,10 @@
+<div class="media">
+  <div class="media-left">
+    <%= image_tag "img_avatar1.png", class: "media-user" %>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><%= @user.email %><br>
+    <small><i><%= t ".account" %> <%= (@user.created_at).strftime("%B %e, %Y") %></i></small></h4>
+    <%= link_to t(".description") %>
+  </div>
+</div>

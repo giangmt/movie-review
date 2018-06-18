@@ -1,0 +1,29 @@
+<div class="media" style="margin-top:20px;">
+  <div class="media-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <th><%= t ".movie" %></th>              
+          <th><%= t ".synopsis" %></th>
+          <th><%= t ".dated" %></th>              
+        </thead>
+        <tbody>
+          <% @watchlists.each do |watchlist| %>
+            <tr>
+              <td>
+                <% watchlist.movie.movie_images.each do |image| %>
+                  <%= link_to (image_tag image.image_url), watchlist.movie, class: "media-bookmark thumbnail" %>
+                <% end %>
+              </td>
+              <td><p><%= truncate watchlist.movie.synopsis, length: Settings.movies.synopsis_short %></p></td>
+              <td><%= (watchlist.created_at).strftime("%B %e, %Y") %></td>
+              <td>
+                <%= link_to t(".remove"), watchlist_path(watchlist), method: t(".delete"), data: {confirm: t(".sure")}, class: "btn btn-danger btn-sm" %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -5,3 +5,6 @@ movie_syno_length: 60
 movies:
   page: 12
   synopsis_short: 200
+user:
+  reviews:
+    page: 2

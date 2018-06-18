@@ -5,8 +5,9 @@
     resources :reviews, only: [:new, :create]
   end
   
+  resources :users, only: :show
   resources :interactives, only: :create
-  resources :watchlists, only: :create
+  resources :watchlists, only: [:create, :destroy]
   
   devise_for :users, controllers: {
     registrations: "users/registrations",

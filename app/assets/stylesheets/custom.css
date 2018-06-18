@@ -85,6 +85,13 @@ figure img {
   border-radius: 6px;
 }
 
+.user-bookmarks {
+  background-color: #f1f1f1;
+  padding: 0.01em 16px;
+  margin: 20px 0;
+  border-radius: 6px;
+}
+
 .wire-review-btn {
   margin: 20px 0;
   text-decoration: none;
@@ -104,6 +111,18 @@ figure img {
 
 .media-object {
   width: 50px;
+}
+
+.media-user {
+  width: 100px;
+}
+
+.media-movie {
+  width: 150px;
+}
+
+.media-bookmark {
+  width: 100px;
 }
 
 #review-title {

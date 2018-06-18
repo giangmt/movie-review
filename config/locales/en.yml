@@ -73,6 +73,24 @@ en:
       success: "Liked success!"
   watchlists:
     create:
-      added_to_watchlist: "Added to watchlist"
+      added: "Added to watchlist"
+    destroy:
+      remove: "Removed from watchlist"
+  users:
+    show:
+      profile: "Users Profile"
+      reviews: "Your Reviews"
+    user_info:
+      account: "Account created at"
+      description: "Description"
+    bookmarks:
+      movie: "Movie"
+      synopsis: "Synopsis"
+      dated: "Dated"
+      actions: "Actions"
+      remove: "Remove"
+      delete: "delete"
+      sure: "Are you sure?"
+
 
 
